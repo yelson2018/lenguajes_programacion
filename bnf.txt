@@ -1,0 +1,72 @@
+<programa>::- <inicio><sentencia><final>
+
+<inicio>::-'INICIO'
+
+<sentencia>::- <sentenciaAsignacion> | <sentenciaSI> | <sentenciaMientras> | <sentenciaRetorno> | <sentenciaFor> | <sentencia>
+
+<sentenciaAsignacion>::- <variable> <operadorAsignar> <expresion>
+
+<variable>::- 'definir' <nombreVariable><tipoDato> ';'
+
+<tipoDato>::- 'int' | 'float' | 'boolean' | 'string' |
+
+<nombreVariable>::- <mayusculas> | <nombreVariable> <letra> | <nombreVariable> <digito>
+
+<letra>::- <minusculas> | <mayusculas>
+
+<minusculas>::- 'a' | 'b' | 'c' | 'd' | 'e' | 'f' | 'g' | 'h' | 'i' | 'j' | 'k' | 'l' | 'm' | 'n' | 'ñ '| 'o' | 'p' | 'q' | 'r' | 's' | 't' | 'u' | 'v' | 'w' | 'x' | 'y' | 'z'
+ 
+<mayusculas>::- 'A' | 'B' | 'C' | 'D' | 'E '| 'F' | 'G '| 'H' | 'I' | 'J' | 'K '| 'L' | 'M' | 'N' | 'Ñ' | 'O' | 'P' | 'Q' | 'R' | 'S' | 'T' | 'U' | 'V' | 'W' | 'X' | 'Y' | 'Z'
+
+<numero>::-<digito> | <digito>'.'<digito> 
+
+<digito>::- `'0' | '1' | '2' | '3'| '4' | '5' | '6' | '7' | '8' | '9'
+
+<operadorAsignar>::-'<-'
+
+<expresion>::-<operacionAritmetica>  | <entero> | <cadena> 
+
+<operacionAritmetica>::- <suma> | <resta> | <multiplicacion> | <divicion> 
+
+<suma<::-<operando> '+' <operando>
+
+<suma<::-<operando> '-' <operando>
+
+<suma<::-<operando> '*' <operando>
+
+<suma<::-<operando> '/' <operando>
+
+<operando>::- <entero>
+
+<entero>::- <operadorUnario> <digito>
+
+<operadorUnario>::- '-' | '+'
+
+<cadena>::- <letra> | <cadena> <letra> | <cadena> <digito>
+
+
+<sentenciaSi>::- <inicioSi> <condicion> 'hacer' <sentencia> <finSi> |   <inicioSi> <condicion> 'hacer' <sentencia> <contrarioHacer>'hacer' <sentenciaSi><finSi>     
+
+<inicioSi>::-'si'
+
+
+
+<condicion>::-<operacionComparacion> | <tipoBooleano>
+
+<operacionComparacion>::- <operando> <operadorLogico> <operando> | <cadena> <igualdad> <cadena>
+
+<operadorLogico>::- '<' | '>' | '>-' | '<-' | '=' | '!=' 
+
+<tipoBooleano>::-'true' | 'false'
+
+<sentenciaMientras>::-'mientras'<condicionPermanencia> 'repetir' <sentencia> 
+
+<sentenciaRetorno>::-'Return'
+
+<sentenciaRepetir>::-'repetir'<variable> <operadorAsignar> <entero> 'hasta' <variable> <operadorLogico> <entero> <incremento> <sentencia>  
+
+<incremento>::-<variable> <operadorAsignar> <variable> '+' <entero> | <variable> <operadorAsignar> <variable> '+ <variable>
+
+
+
+
