@@ -1,0 +1,1 @@
+definir var entero;

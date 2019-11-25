@@ -73,6 +73,8 @@ sentenciaImprimir>::-'imprimir'<sentenciaContenedor> | 'imprimir' <cadena>
 
 <sentenciaCursor>::-'cursor'<entero>','<entero>
 
+<final>::-'FIN'
+
 
 
 
